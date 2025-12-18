@@ -1,0 +1,24 @@
+# build artifacts
+build/
+cmake-build-*/
+*.o
+*.obj
+*.a
+*.lib
+*.exe
+*.out
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# mac/linux
+.DS_Store
+
+# profiling outputs
+perf.data
+perf.data.old
+callgrind.out.*
+report.txt
