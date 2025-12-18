@@ -11,7 +11,10 @@ add_executable(bench
   src/bench.cpp
 )
 target_include_directories(bench PRIVATE include)
-target_compile_options(bench PRIVATE -O3)
+target_compile_options(bench PRIVATE
+  $<$<CXX_COMPILER_ID:MSVC>:/O2>
+  $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-O3>
+)
 
 if(ENABLE_TESTS)
   enable_testing()
